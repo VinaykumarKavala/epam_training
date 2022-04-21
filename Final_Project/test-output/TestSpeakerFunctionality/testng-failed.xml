@@ -8,9 +8,9 @@
   <test thread-count="5" name="TestSpeakerAddingViaAPI(failed)">
     <parameter name="PlatformName" value="LocalWebDriver"/>
     <parameter name="EmailID" value="Vinay@epam.com"/>
-    <parameter name="SpeakerName" value="GangaPftrffakdhqee"/>
+    <parameter name="SpeakerName" value="Gssnmgxxbbbafxazbftja"/>
     <parameter name="SpeakerProfile" value="JavaScript"/>
-    <parameter name="SpeakerEmail" value="ctusdsevefkeyib@eedf.com"/>
+    <parameter name="SpeakerEmail" value="ctdxxulsghxdafzmvsnf@gmail.com"/>
     <parameter name="driverName" value="chrome"/>
     <parameter name="Url" value="http://epinhydw0087/programs/#/"/>
     <parameter name="Password" value="A1.vinay"/>

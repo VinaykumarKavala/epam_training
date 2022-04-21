@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -99,12 +100,23 @@ public class SpeakersPage extends MenuContentSection {
 		
 		/*
 		 * String
-		 * script="document.evaluate('//input[@type=\"search\"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.value="
-		 * +speakerName+";"; js.executeScript(script);
+		 * scrpt="document.evaluate('//input[@type=\\\"search\\\"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.focus();"
+		 * ; js.executeScript(scrpt);
 		 */
+		  
+		  new WebDriverWait(driver, Duration.ofSeconds(10))
+	        .until(ExpectedConditions.invisibilityOfElementLocated(By.id("closePopup")));
+		  String script="document.evaluate('//input[@type=\"search\"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.value=\""
+		  +speakerName+"\";";
+		  js.executeScript(script);
+		  
+		  searchField.sendKeys(Keys.ENTER);
+		  
+		 
 		
-		Thread.sleep(3000);
-		searchField.sendKeys(speakerName);
+		/*
+		 * Thread.sleep(3000); searchField.sendKeys(speakerName);
+		 */
 	}
 
 	public boolean isDataDisplayed(String speakerName, String speakerEmail, String speakerProfile) {
